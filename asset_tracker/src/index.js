@@ -4,7 +4,8 @@ import ReactDOM from 'react-dom'
 import './index.css'
 import App from './App'
 import * as serviceWorker from './serviceWorker'
-import Card from './components/Card/index'
+// import Card from './components/Card/index'
+// import Navbar from './components/Navbar/index'
 
 ReactDOM.render(<App />, document.getElementById('root'))
 
