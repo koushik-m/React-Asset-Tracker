@@ -1,0 +1,37 @@
+
+.navbar {
+    width: 100%;
+    background-color: #000;
+    overflow: auto;
+  }
+  
+  .navbar a {
+    float: right !important;
+    padding: 12px;
+    width: 6%;    
+    color: white;
+    text-decoration: none;
+    font-size: 17px;
+    
+  }
+  .navbar .active{
+      float:left !important;
+      width: 14%;
+      margin-right: 55%;
+  }
+  
+  .navbar .active:hover {
+    background-color: #1ba0a9;
+    }
+     
+     .navbar .active .home {
+    background-color: #555;
+    width:20%;
+  }
+  
+  @media screen and (max-width: 500px) {
+    .navbar a {
+      float: none;
+      display: block;
+    }
+  }
