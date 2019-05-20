@@ -1,5 +1,6 @@
 /* eslint-disable no-unused-vars */
 import React from 'react'
+import { Button } from 'reactstrap'
 import './styles.css'
 
 export default class Navbar extends React.Component {
@@ -10,6 +11,7 @@ export default class Navbar extends React.Component {
         <a href="../user/user_my_account.html"><i class="fa fa-fw fa-user"></i> </a>
         <a href="../user/user_notification.html"><i class="fa fa-fw fa-bell"></i> </a>
         <a href="../user/user_devices.html"><i class="fa fa-fw fa-mobile"></i> </a>
+        <Button color='danger'>Log out</Button>
       </div>
     )
   }

@@ -4,10 +4,14 @@ import ReactDOM from 'react-dom'
 import './index.css'
 import App from './App'
 import * as serviceWorker from './serviceWorker'
+import 'bootstrap/dist/css/bootstrap.min.css'
+import Login from './view/Login/index'
+import Devices from './view/Devices/index'
 // import Card from './components/Card/index'
 // import Navbar from './components/Navbar/index'
 
-ReactDOM.render(<App />, document.getElementById('root'))
+// ReactDOM.render(<App />, document.getElementById('root'))
+ReactDOM.render(<Login />, document.getElementById('root'))
 
 // ReactDOM.render(<Card headerprop="Hey there" os="Android" imgsrc="ipad.jpg" company="Apple" typeofuser="user"/>, document.getElementById('root'));
 

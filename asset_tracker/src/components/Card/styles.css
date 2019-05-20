@@ -6,14 +6,13 @@
     flex-direction: column;
     min-width: 0;
     word-wrap: break-word;
-    background-color: #fff;
+    background-color: skyblue;
     background-clip: border-box;
     border: 1px solid rgba(0,0,0,.125);
     border-radius: .25rem;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
-    width: 25%;
+    width: 100%;
     height: 20%;
-    margin-top: 5%;
-    margin-right: 8%;
+    padding: 1%;
 }
