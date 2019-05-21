@@ -1,21 +1,22 @@
 /* eslint-disable no-unused-vars */
 import React from 'react'
 import './styles.css'
-// import Button from '../../components/Button/index'
-import Navbar from '../../components/Navbar/index'
-// import Card from '../../components/Card/index'
+// import Button from '../../Components/Button/index'
+import Navbar from '../../Components/Navbar/index'
+// import Card from '../../Components/Card/index'
 // import * as classes from '../../cssClasses'
-import Image from '../../components/Image/index'
-import Row from '../../components/Row/index'
-import Col from '../../components/Col/index'
-import Container from '../../components/Container/index'
-import Card from '../../components/Card/index'
-import Button from '../../components/Button/index'
+import Image from '../../Components/Image/index'
+import Row from '../../Components/Row/index'
+import Col from '../../Components/Col/index'
+import Container from '../../Components/Container/index'
+import Card from '../../Components/Card/index'
+import Button from '../../Components/Button/index'
 import Login from '../Login/index'
 
 export default class Devices extends React.Component {
   render () {
     const { typeofuser, page } = this.props
+    // console.log(this.props);
 
     var restcomps
     if (typeofuser === 'admin') {
@@ -37,19 +38,19 @@ export default class Devices extends React.Component {
             <Card headerprop="iPad" imgsrc="ipad.jpg" company="Apple" os="Mac" typeofuser={typeofuser} page={page} />
           </Col>
           <Col md={4}>
-            <Card headerprop="iPad" imgsrc="ipad.jpg" company="Apple" os="Mac" typeofuser={typeofuser} page={page}/>
+            <Card headerprop="iPad" imgsrc="ipad.jpg" company="Apple" os="Mac" typeofuser={typeofuser} page={page} />
           </Col>
         </Row>
         <div className="margin"></div>
         <Row>
           <Col md={4}>
-            <Card headerprop="iPad" imgsrc="ipad.jpg" company="Apple" os="Mac" typeofuser={typeofuser} page={page}/>
+            <Card headerprop="iPad" imgsrc="ipad.jpg" company="Apple" os="Mac" typeofuser={typeofuser} page={page} />
           </Col>
           <Col md={4}>
-            <Card headerprop="iPad" imgsrc="ipad.jpg" company="Apple" os="Mac" typeofuser={typeofuser} page={page}/>
+            <Card headerprop="iPad" imgsrc="ipad.jpg" company="Apple" os="Mac" typeofuser={typeofuser} page={page} />
           </Col>
           <Col md={4}>
-            <Card headerprop="iPad" imgsrc="ipad.jpg" company="Apple" os="Mac" typeofuser={typeofuser} page={page}/>
+            <Card headerprop="iPad" imgsrc="ipad.jpg" company="Apple" os="Mac" typeofuser={typeofuser} page={page} />
           </Col>
         </Row>
       </Container>

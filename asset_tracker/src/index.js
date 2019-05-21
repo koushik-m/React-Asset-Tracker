@@ -8,12 +8,13 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import Login from './view/Login/index'
 import Devices from './view/Devices/index'
 import Signup from './view/Registration/index'
+import { RouterApp } from './Routing/RouterApp'
 // import Card from './components/Card/index'
 // import Navbar from './components/Navbar/index'
 
 // ReactDOM.render(<App />, document.getElementById('root'))
 // ReactDOM.render(<Devices typeofuser="user" page="devices" />, document.getElementById('root'))
-ReactDOM.render(<Signup />, document.getElementById('root'))
+ReactDOM.render(<RouterApp />, document.getElementById('root'))
 
 // ReactDOM.render(<Card headerprop="Hey there" os="Android" imgsrc="ipad.jpg" company="Apple" typeofuser="user"/>, document.getElementById('root'));
 

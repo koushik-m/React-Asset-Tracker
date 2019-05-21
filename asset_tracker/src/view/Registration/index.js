@@ -1,13 +1,13 @@
 /* eslint-disable no-unused-vars */
 import React from 'react'
 import './styles.css'
-import Image from '../../components/Image/index'
-import Row from '../../components/Row/index'
-import Col from '../../components/Col/index'
-import Container from '../../components/Container/index'
-import Button from '../../components/Button/index'
-import Input from '../../components/Input/index'
-import Header from '../../components/Header/index'
+import Image from '../../Components/Image/index'
+import Row from '../../Components/Row/index'
+import Col from '../../Components/Col/index'
+import Container from '../../Components/Container/index'
+import Button from '../../Components/Button/index'
+import Input from '../../Components/Input/index'
+import Header from '../../Components/Header/index'
 
 class Signup extends React.Component {
   render () {
