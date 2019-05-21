@@ -6,152 +6,53 @@ import Navbar from '../../components/Navbar/index'
 // import Card from '../../components/Card/index'
 // import * as classes from '../../cssClasses'
 import Image from '../../components/Image/index'
-import { Container, Row, Col, Card, CardImg, CardText, CardBody, CardTitle, CardSubtitle, Button } from 'reactstrap'
+import Row from '../../components/Row/index'
+import Col from '../../components/Col/index'
+import Container from '../../components/Container/index'
+import Card from '../../components/Card/index'
+import Button from '../../components/Button/index'
 import Login from '../Login/index'
 
 export default class Devices extends React.Component {
   render () {
-    const { typeofuser } = this.props
+    const { typeofuser, page } = this.props
 
     var restcomps
     if (typeofuser === 'admin') {
       restcomps = <React.Fragment>
-        <Container>
-          <Col md={{ span: 3, offset: 9 }}> <Button color='info'>Add New Device</Button></Col>
-          <div className="margin"></div>
-          <Row>
-            <Col md={4}>
-              <Card>
-                <CardBody>
-                  <CardTitle><strong>iPad</strong></CardTitle>
-                </CardBody>
-                <CardImg src = {require(`../../shared/ipad.jpg`)} alt="Card image cap" />
-                <CardBody>
-                  <Button color="dark">Details</Button>{' '}
-                  <Button color="dark">Edit</Button>{' '}
-                  <Button color="dark">Delete</Button>
-                </CardBody>
-              </Card>
-            </Col>
-            <Col md={4}>
-              <Card>
-                <CardBody>
-                  <CardTitle><strong>iPad</strong></CardTitle>
-                </CardBody>
-                <CardImg src = {require(`../../shared/ipad.jpg`)} alt="Card image cap" />
-                <CardBody>
-                  <Button color="dark">Details</Button>{' '}
-                  <Button color="dark">Edit</Button>{' '}
-                  <Button color="dark">Delete</Button>
-                </CardBody>
-              </Card>
-            </Col>
-            <Col md={4}>
-              <Card>
-                <CardBody>
-                  <CardTitle><strong>iPad</strong></CardTitle>
-                </CardBody>
-                <CardImg src = {require(`../../shared/ipad.jpg`)} alt="Card image cap" />
-                <CardBody>
-                  <Button color="dark">Details</Button>{' '}
-                  <Button color="dark">Edit</Button>{' '}
-                  <Button color="dark">Delete</Button>
-                </CardBody>
-              </Card>
-            </Col>
-          </Row>
-          <div className="margin"></div>
-          <Row>
-            <Col md={4}>
-              <Card>
-                <CardBody>
-                  <CardTitle><strong>iPad</strong></CardTitle>
-                </CardBody>
-                <CardImg src = {require(`../../shared/ipad.jpg`)} alt="Card image cap" />
-                <CardBody>
-                  <Button color="dark">Details</Button>{' '}
-                  <Button color="dark">Edit</Button>{' '}
-                  <Button color="dark">Delete</Button>
-                </CardBody>
-              </Card>
-            </Col>
-            <Col md={4}>
-              <Card>
-                <CardBody>
-                  <CardTitle><strong>iPad</strong></CardTitle>
-                </CardBody>
-                <CardImg src = {require(`../../shared/ipad.jpg`)} alt="Card image cap" />
-                <CardBody>
-                  <Button color="dark">Details</Button>{' '}
-                  <Button color="dark">Edit</Button>{' '}
-                  <Button color="dark">Delete</Button>
-                </CardBody>
-              </Card>
-            </Col>
-            <Col md={4}>
-              <Card>
-                <CardBody>
-                  <CardTitle><strong>iPad</strong></CardTitle>
-                </CardBody>
-                <CardImg src = {require(`../../shared/ipad.jpg`)} alt="Card image cap" />
-                <CardBody>
-                  <Button color="dark">Details</Button>{' '}
-                  <Button color="dark">Edit</Button>{' '}
-                  <Button color="dark">Delete</Button>
-                </CardBody>
-              </Card>
-            </Col>
-          </Row>
-        </Container>
-      </React.Fragment>
-    } else {
-      restcomps = <React.Fragment>
-        <Container>
-          <Row>
-            <Col md={4}>
-              <Card>
-                <CardBody>
-                  <CardTitle><strong>iPad</strong></CardTitle>
-                </CardBody>
-                <CardImg src = {require(`../../shared/ipad.jpg`)} alt="Card image cap" />
-                <CardBody>
-                  <Button color="dark">Request</Button>{' '}
-                  <Button color="dark">Instant Request</Button>{' '}
-                </CardBody>
-              </Card>
-            </Col>
-            <Col md={4}>
-              <Card>
-                <CardBody>
-                  <CardTitle><strong>iPad</strong></CardTitle>
-                </CardBody>
-                <CardImg src = {require(`../../shared/ipad.jpg`)} alt="Card image cap" />
-                <CardBody>
-                  <Button color="dark">Request</Button>{' '}
-                  <Button color="dark">Instant Request</Button>{' '}
-                </CardBody>
-              </Card>
-            </Col>
-            <Col md={4}>
-              <Card>
-                <CardBody>
-                  <CardTitle><strong>iPad</strong></CardTitle>
-                </CardBody>
-                <CardImg src = {require(`../../shared/ipad.jpg`)} alt="Card image cap" />
-                <CardBody>
-                  <Button color="dark">Request</Button>{' '}
-                  <Button color="dark">Instant Request</Button>{' '}
-                </CardBody>
-              </Card>
-            </Col>
-          </Row>
-        </Container>
+        <Col md={{ offset: 9 }}> <Button btnprop='btn btn-dark'>Add New Device</Button></Col>
       </React.Fragment>
     }
 
     return <React.Fragment>
       <Navbar />
       {restcomps}
+      <Container>
+        <div className="margin"></div>
+        <Row>
+          <Col md={4}>
+            <Card headerprop="iPad" imgsrc="ipad.jpg" company="Apple" os="Mac" typeofuser={typeofuser} page={page} />
+          </Col>
+          <Col md={4}>
+            <Card headerprop="iPad" imgsrc="ipad.jpg" company="Apple" os="Mac" typeofuser={typeofuser} page={page} />
+          </Col>
+          <Col md={4}>
+            <Card headerprop="iPad" imgsrc="ipad.jpg" company="Apple" os="Mac" typeofuser={typeofuser} page={page}/>
+          </Col>
+        </Row>
+        <div className="margin"></div>
+        <Row>
+          <Col md={4}>
+            <Card headerprop="iPad" imgsrc="ipad.jpg" company="Apple" os="Mac" typeofuser={typeofuser} page={page}/>
+          </Col>
+          <Col md={4}>
+            <Card headerprop="iPad" imgsrc="ipad.jpg" company="Apple" os="Mac" typeofuser={typeofuser} page={page}/>
+          </Col>
+          <Col md={4}>
+            <Card headerprop="iPad" imgsrc="ipad.jpg" company="Apple" os="Mac" typeofuser={typeofuser} page={page}/>
+          </Col>
+        </Row>
+      </Container>
     </React.Fragment>
   }
 }
