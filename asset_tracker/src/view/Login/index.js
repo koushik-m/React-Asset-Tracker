@@ -1,14 +1,15 @@
 /* eslint-disable no-unused-vars */
 import React from 'react'
 import './styles.css'
-import Image from '../../components/Image/index'
-import Card from '../../components/Card/index'
-import Row from '../../components/Row/index'
-import Col from '../../components/Col/index'
-import Container from '../../components/Container/index'
-import Button from '../../components/Button/index'
-import Input from '../../components/Input/index'
-import Header from '../../components/Header/index'
+import Image from '../../Components/Image/index'
+import Card from '../../Components/Card/index'
+import Row from '../../Components/Row/index'
+import Col from '../../Components/Col/index'
+import Container from '../../Components/Container/index'
+import Button from '../../Components/Button/index'
+import Input from '../../Components/Input/index'
+import Header from '../../Components/Header/index'
+import { Link } from 'react-router-dom'
 
 class Login extends React.Component {
   render () {
@@ -26,8 +27,8 @@ class Login extends React.Component {
             <Container>
               <Input placeholder="Username"/>
               <Input placeholder="Password" className="mt-5 mb-5"/>
-              <Button btnprop='btn btn-dark'>Login</Button>
-              <Button btnprop='btn btn-dark'>Signup</Button>
+              <Link to ="/user"><Button btnprop='btn btn-dark'>Login</Button></Link>
+              <Link to="/register"><Button btnprop='btn btn-dark'>Signup</Button></Link>
 
             </Container>
           </Col>
