@@ -16,20 +16,19 @@ class Signup extends React.Component {
         <Row>
           <Col md={6} className="bgc">
             <div className="PSimage">
-              <Image source='sapient.png'/>
+              <Image source="sapient.png" />
             </div>
           </Col>
           <Col md={6}>
-            <Header headerprop="Sign Up"/>
+            <Header headerprop="Sign Up" />
             <Container>
-              <Input placeholder="Name" className="mt-5 mb-5"/>
-              <Input placeholder="Username" className="mt-5 mb-5"/>
-              <Input placeholder="Email" className="mt-5 mb-5"/>
-              <Input placeholder="Password" className="mt-5 mb-5"/>
-              <Input placeholder="Confirm Password" className="mt-5 mb-5"/>
+              <Input placeholder="Name" className="mt-5 mb-5" />
+              <Input placeholder="Username" className="mt-5 mb-5" />
+              <Input placeholder="Email" className="mt-5 mb-5" />
+              <Input placeholder="Password" className="mt-5 mb-5" />
+              <Input placeholder="Confirm Password" className="mt-5 mb-5" />
 
-              <Button btnprop='btn btn-dark'>Register</Button>
-
+              <Button btnprop="btn btn-dark">Register</Button>
             </Container>
           </Col>
         </Row>

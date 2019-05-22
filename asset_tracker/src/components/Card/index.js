@@ -37,9 +37,9 @@ export default class Card extends React.Component {
           <Label labelprop={company} />
           <Label labelprop={os} />
           <div>
-            <Button btnprop='btn btn-dark'>{button1}</Button>
-            <Button btnprop='btn btn-dark'>{button2}</Button>
-            {button3 ? <Button btnprop='btn btn-dark'>{button3}</Button> : ''}
+            <Button btnprop="btn btn-dark">{button1}</Button>
+            <Button btnprop="btn btn-dark">{button2}</Button>
+            {button3 ? <Button btnprop="btn btn-dark">{button3}</Button> : ''}
           </div>
         </React.Fragment>
       </div>

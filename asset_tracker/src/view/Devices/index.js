@@ -16,44 +16,92 @@ import Login from '../Login/index'
 export default class Devices extends React.Component {
   render () {
     const { typeofuser, page } = this.props
-    // console.log(this.props);
 
     var restcomps
     if (typeofuser === 'admin') {
-      restcomps = <React.Fragment>
-        <Col md={{ offset: 9 }}> <Button btnprop='btn btn-dark'>Add New Device</Button></Col>
-      </React.Fragment>
+      restcomps = (
+        <React.Fragment>
+          <Col md={{ offset: 9 }}>
+            {' '}
+            <Button btnprop="btn btn-dark">Add New Device</Button>
+          </Col>
+        </React.Fragment>
+      )
     }
 
-    return <React.Fragment>
-      <Navbar />
-      {restcomps}
-      <Container>
-        <div className="margin"></div>
-        <Row>
-          <Col md={4}>
-            <Card headerprop="iPad" imgsrc="ipad.jpg" company="Apple" os="Mac" typeofuser={typeofuser} page={page} />
-          </Col>
-          <Col md={4}>
-            <Card headerprop="iPad" imgsrc="ipad.jpg" company="Apple" os="Mac" typeofuser={typeofuser} page={page} />
-          </Col>
-          <Col md={4}>
-            <Card headerprop="iPad" imgsrc="ipad.jpg" company="Apple" os="Mac" typeofuser={typeofuser} page={page} />
-          </Col>
-        </Row>
-        <div className="margin"></div>
-        <Row>
-          <Col md={4}>
-            <Card headerprop="iPad" imgsrc="ipad.jpg" company="Apple" os="Mac" typeofuser={typeofuser} page={page} />
-          </Col>
-          <Col md={4}>
-            <Card headerprop="iPad" imgsrc="ipad.jpg" company="Apple" os="Mac" typeofuser={typeofuser} page={page} />
-          </Col>
-          <Col md={4}>
-            <Card headerprop="iPad" imgsrc="ipad.jpg" company="Apple" os="Mac" typeofuser={typeofuser} page={page} />
-          </Col>
-        </Row>
-      </Container>
-    </React.Fragment>
+    return (
+      <React.Fragment>
+        <Navbar />
+        {restcomps}
+        <Container>
+          <div className="margin" />
+          <Row>
+            <Col md={4}>
+              <Card
+                headerprop="iPad"
+                imgsrc="ipad.jpg"
+                company="Apple"
+                os="Mac"
+                typeofuser={typeofuser}
+                page={page}
+              />
+            </Col>
+            <Col md={4}>
+              <Card
+                headerprop="iPad"
+                imgsrc="ipad.jpg"
+                company="Apple"
+                os="Mac"
+                typeofuser={typeofuser}
+                page={page}
+              />
+            </Col>
+            <Col md={4}>
+              <Card
+                headerprop="iPad"
+                imgsrc="ipad.jpg"
+                company="Apple"
+                os="Mac"
+                typeofuser={typeofuser}
+                page={page}
+              />
+            </Col>
+          </Row>
+          <div className="margin" />
+          <Row>
+            <Col md={4}>
+              <Card
+                headerprop="iPad"
+                imgsrc="ipad.jpg"
+                company="Apple"
+                os="Mac"
+                typeofuser={typeofuser}
+                page={page}
+              />
+            </Col>
+            <Col md={4}>
+              <Card
+                headerprop="iPad"
+                imgsrc="ipad.jpg"
+                company="Apple"
+                os="Mac"
+                typeofuser={typeofuser}
+                page={page}
+              />
+            </Col>
+            <Col md={4}>
+              <Card
+                headerprop="iPad"
+                imgsrc="ipad.jpg"
+                company="Apple"
+                os="Mac"
+                typeofuser={typeofuser}
+                page={page}
+              />
+            </Col>
+          </Row>
+        </Container>
+      </React.Fragment>
+    )
   }
 }

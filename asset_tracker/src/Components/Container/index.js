@@ -15,23 +15,15 @@ const defaultProps = {
   tag: 'div'
 }
 
-const Container = (props) => {
-  const {
-    className,
-    cssModule,
-    fluid,
-    tag: Tag,
-    ...attributes
-  } = props
+const Container = props => {
+  const { className, cssModule, fluid, tag: Tag, ...attributes } = props
 
-  const classes = mapToCssModules(classNames(
-    className,
-    fluid ? 'container-fluid' : 'container'
-  ), cssModule)
-
-  return (
-    <Tag {...attributes} className={classes} />
+  const classes = mapToCssModules(
+    classNames(className, fluid ? 'container-fluid' : 'container'),
+    cssModule
   )
+
+  return <Tag {...attributes} className={classes} />
 }
 
 Container.propTypes = propTypes

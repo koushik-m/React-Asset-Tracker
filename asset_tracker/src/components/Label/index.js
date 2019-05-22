@@ -4,10 +4,6 @@ export default class Header extends React.Component {
   render () {
     const { labelprop } = this.props
 
-    return (
-      <p >
-        {labelprop}
-      </p>
-    )
+    return <p>{labelprop}</p>
   }
 }

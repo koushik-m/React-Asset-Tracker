@@ -3,5 +3,6 @@ import { users } from './UserReducer'
 import { devices } from './DeviceReducer'
 
 export var rootReducer = combineReducers({
-  users, devices
+  userdata: users,
+  devicedata: devices
 })
