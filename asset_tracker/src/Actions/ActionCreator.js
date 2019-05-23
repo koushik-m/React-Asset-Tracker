@@ -1,5 +1,5 @@
-import { defData } from '../Store/Store'
-import { localStorage } from 'react'
+/* eslint-disable no-undef */
+import { defData } from '../store/Store'
 export function AddNewDevice (newdevice) {
   return { type: 'ADD_NEW_DEVICE', newdevice }
 }
@@ -13,10 +13,10 @@ export function AddUser () {
 }
 
 export function AuthenticateUser (user) {
-  // console.log(user)
-  const userDetails = defData.filter((p, i) =>
-    p.username === user.username && p.password === user.password
+  // console.log(defData)
+  const userDetails = defData.userdata.filter(
+    (p, i) => p.username === user.username && p.password === user.password
   )
-  localStorage.setItem('loggedInUser', JSON.stringify(userDetails[0]))
+  sessionStorage.setItem('loggedInUser', JSON.stringify(userDetails[0]))
   return { type: 'IS_USER_AUTHENTICATED', userDetails }
 }

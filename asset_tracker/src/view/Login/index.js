@@ -21,38 +21,58 @@ class Login extends React.Component {
     }
   }
 
-  // validate = () => {
-  //   this.props.AuthenticateUser(this.state);
-  // }
+  validate = () => {
+    this.props.AuthenticateUser(this.state)
+  }
   render () {
-    if (this.props.users.isUserLoggedIn) {
-      Auth.login(() => {
-        this.validate.bind(this)
-        this.props.history.history.push('/user')
-      })
+    if (this.props.allUsers.isUserLoggedIn) {
+      Auth.login()
+      this.props.history.history.push('/user')
     }
     return (
       <React.Fragment>
         <Row>
           <Col md={8}>
             <div className="ipadimage">
-              <Image source='ipad1.jpg' />
+              <Image source="ipad1.jpg" />
             </div>
           </Col>
           <Col md={4}>
-            <div className="PSimage"><Image source='sapient.png' /></div>
+            <div className="PSimage">
+              <Image source="sapient.png" />
+            </div>
             <Header headerprop="Login" />
             <Container>
-              <Input placeholder="Username" ref="username" value={this.state.username} onChange = {(e) => { return this.setState({ username: e.target.value }) }}/>
-              <Input placeholder="Password" className="mt-5 mb-5" ref="password" value={this.state.password} onChange = {(e) => { return this.setState({ password: e.target.value }) }}/>
-              <Button btnprop='btn btn-dark' onPress={this.validate.bind(this)}>Login</Button>
-              <Link to="/register"><Button btnprop='btn btn-dark'>Signup</Button></Link>
-
+              <Input
+                placeholder="Username"
+                ref="username"
+                value={this.state.username}
+                onChange={e => {
+                  return this.setState({ username: e.target.value })
+                }}
+              />
+              <Input
+                placeholder="Password"
+                className="mt-5 mb-5"
+                ref="password"
+                value={this.state.password}
+                onChange={e => {
+                  return this.setState({ password: e.target.value })
+                }}
+              />
+              <Button btnprop="btn btn-dark" onPress={this.validate.bind(this)}>
+                Login
+              </Button>
+              <Link to="/register">
+                <Button btnprop="btn btn-dark">Signup</Button>
+              </Link>
             </Container>
           </Col>
         </Row>
         <Row>
-          <Col md={{ size: 4, offset: 4 }}><Image source="AssetLogo.jpg" /></Col>
+          <Col md={{ size: 4, offset: 4 }}>
+            <Image source="AssetLogo.jpg" />
+          </Col>
         </Row>
       </React.Fragment>
     )

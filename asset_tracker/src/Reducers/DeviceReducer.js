@@ -10,6 +10,7 @@ export function devices (defStore = [], action) {
       console.log(theNewList)
       return theNewList
 
-    default: return defStore
+    default:
+      return defStore
   }
 }

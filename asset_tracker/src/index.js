@@ -14,7 +14,7 @@ import { RouterApp } from './Routing/RouterApp'
 
 // ReactDOM.render(<App />, document.getElementById('root'))
 // ReactDOM.render(<Devices typeofuser="user" page="devices" />, document.getElementById('root'))
-ReactDOM.render(<RouterApp />, document.getElementById('root'))
+ReactDOM.render(<App />, document.getElementById('root'))
 
 // ReactDOM.render(<Card headerprop="Hey there" os="Android" imgsrc="ipad.jpg" company="Apple" typeofuser="user"/>, document.getElementById('root'));
 

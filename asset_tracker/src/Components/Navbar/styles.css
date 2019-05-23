@@ -8,8 +8,7 @@
   
   .navbar a {
     float: right !important;
-    padding: 12px;
-    width: 6%;    
+     
     color: white;
     text-decoration: none;
     font-size: 17px;
@@ -36,3 +35,5 @@
       display: block;
     }
   }
+
+  

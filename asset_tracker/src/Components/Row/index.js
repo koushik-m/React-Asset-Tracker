@@ -16,7 +16,7 @@ const defaultProps = {
   tag: 'div'
 }
 
-const Row = (props) => {
+const Row = props => {
   const {
     className,
     cssModule,
@@ -26,15 +26,16 @@ const Row = (props) => {
     ...attributes
   } = props
 
-  const classes = mapToCssModules(classNames(
-    className,
-    noGutters ? 'no-gutters' : null,
-    form ? 'form-row' : 'row'
-  ), cssModule)
-
-  return (
-    <Tag {...attributes} className={classes} />
+  const classes = mapToCssModules(
+    classNames(
+      className,
+      noGutters ? 'no-gutters' : null,
+      form ? 'form-row' : 'row'
+    ),
+    cssModule
   )
+
+  return <Tag {...attributes} className={classes} />
 }
 
 Row.propTypes = propTypes

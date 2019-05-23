@@ -3,11 +3,11 @@ let configuration = {
   containerWidths: [540, 750, 960, 1140],
   gutterWidth: 30,
   gridColumns: 12,
-  defaultScreenClass: 'xl',
-};
+  defaultScreenClass: 'xl'
+}
 
-export const getConfiguration = () => configuration;
+export const getConfiguration = () => configuration
 
-export const setConfiguration = (newConfiguration) => {
-  configuration = { ...configuration, ...newConfiguration };
-};
+export const setConfiguration = newConfiguration => {
+  configuration = { ...configuration, ...newConfiguration }
+}
