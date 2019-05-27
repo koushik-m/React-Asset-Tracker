@@ -21,9 +21,10 @@ export default class Devices extends React.Component {
 
     var restcomps
 
-    var dynamiccard, userDevices
+    var dynamiccard, userDevices, dynamiccard1
     var cards = []
-    // console.log('=====================>', this.props)
+    var reqdata = {}
+    var admindata = []
     if (page === 'home' && typeofuser === 'admin') {
       restcomps = (
         <React.Fragment>
@@ -33,61 +34,44 @@ export default class Devices extends React.Component {
           </Col>
         </React.Fragment>
       )
-      console.log('userdata====', userdata.length)
-      for (var j = 0; j < userdata.length; j++) {
-        console.log(
-          'userdata inside tnbe for loop',
-          userdata[j].requestedDevice.length
-        )
-
-        for (var k = 0; k < userdata[j].requestedDevice.length; k++) {
-          console.log(userdata[j].requestedDevice[k])
-          console.log('inside the for loop')
-          // userDevices = this.props.allDevices.filter(
-          //   p => p.id === this.props.allUsers.userDetails.requestedDevice[i]
-          // )
-          // cards.push(userDevices)
+      for (let j = 0; j < userdata.length; j++) {
+        if (userdata[j].role === 'user') {
+          admindata.push({
+            username: userdata[j].username,
+            requestedDevice: userdata[j].requestedDevice
+          })
         }
-        // console.log(cards)
-        // dynamiccard = cards.map(function (device, index) {
-        //   return (
-        //     <Col md={4}>
-        //       <Card
-        //         headerprop={device[0].name}
-        //         imgsrc={device[0].img}
-        //         company={device[0].brand}
-        //         os={device[0].os}
-        //         typeofuser={typeofuser}
-        //         page={page}
-        //       />
-        //     </Col>
-        //   )
-        // })
-
-        /// ///////////////////////////////////////////////
-        // userDevices = this.props.allDevices.filter(
-        //   p => p.id === userdata[j].requestedDevice
-        // )
-        // cards.push(userDevices)
+        if (userdata[j].role === 'admin') {
+          userdata[j].requested = admindata
+        }
       }
-      // console.log(cards)
-      // dynamiccard = cards.map(function (device, index) {
-      //   return (
-      //     <Col md={4}>
-      //       <Card
-      //         headerprop={device[0].name}
-      //         imgsrc={device[0].img}
-      //         company={device[0].brand}
-      //         os={device[0].os}
-      //         typeofuser={typeofuser}
-      //         page={page}
-      //       />
-      //     </Col>
-      //   )
-      // })
-    }
+      dynamiccard = admindata.map((device, index) => {
+        console.log('inside the admin map', device, index)
 
-    if (page === 'home' && typeofuser === 'user') {
+        return device.requestedDevice.map((item, i) => {
+          // console.log('individual devices', device.requestedDevice[i])
+          userDevices = devicedata.filter(
+            p => p.id === device.requestedDevice[i]
+          )
+          const { name, img, brand, os } = userDevices[0] || {}
+          console.log(device.username, userDevices)
+          cards.push({ user: device.username, devices: userDevices })
+          return (
+            <Col md={4}>
+              <div>{device.username}</div>
+              <Card
+                headerprop={name}
+                imgsrc={img}
+                company={brand}
+                os={os}
+                typeofuser={typeofuser}
+                page={page}
+              />
+            </Col>
+          )
+        })
+      })
+    } else if (page === 'home' && typeofuser === 'user') {
       restcomps = <Header headerprop="Requested Devices" />
       for (
         var i = 0;
@@ -132,6 +116,7 @@ export default class Devices extends React.Component {
         )
       })
     }
+    console.log(dynamiccard, '===============>')
     return (
       <React.Fragment>
         <Navbar {...this.props} />

@@ -8,11 +8,13 @@ import Container from '../../Components/Container/index'
 import Button from '../../Components/Button/index'
 import Input from '../../Components/Input/index'
 import Header from '../../Components/Header/index'
+import { Link } from 'react-router-dom'
 
 class Signup extends React.Component {
   render () {
     return (
       <React.Fragment>
+        <div className="margin1" />
         <Row>
           <Col md={6} className="bgc">
             <div className="PSimage">
@@ -30,7 +32,9 @@ class Signup extends React.Component {
               <Input placeholder="Password" className="mt-5 mb-5" />
               <Input placeholder="Confirm Password" className="mt-5 mb-5" />
 
-              <Button btnprop="btn btn-dark">Register</Button>
+              <Link to="/">
+                <Button btnprop="btn btn-dark">Register</Button>
+              </Link>
             </Container>
           </Col>
         </Row>
