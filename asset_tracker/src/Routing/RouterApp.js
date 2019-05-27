@@ -7,6 +7,7 @@ import Signup from '../view/Registration/index'
 import Devices from '../view/Devices/index'
 import Profile from '../view/Profile/index'
 import { ProtectedRoute } from '../protected_route'
+import Notifications from '../view/Notifications/index'
 
 export default class Home extends React.Component {
   constructor (props) {
@@ -14,10 +15,11 @@ export default class Home extends React.Component {
     // console.log((localStorage.getItem('loggedInUser')))
     // eslint-disable-next-line no-undef
     const users = JSON.parse(localStorage.getItem('loggedInUser'))
-    if (users) this.props.AuthenicateUser(users)
+    if (users) {
+      this.props.AuthenticateUser(users)
+    }
   }
   render () {
-    console.log(this.props)
     return (
       <div>
         <Route
@@ -27,7 +29,7 @@ export default class Home extends React.Component {
             return <Login {...this.props} history={history} />
           }}
         />
-        <ProtectedRoute path="/register" exact component={Signup} />
+        <Route path="/register" exact component={Signup} />
         <ProtectedRoute
           path="/user"
           exact
@@ -37,17 +39,52 @@ export default class Home extends React.Component {
           {...this.props}
         />
         <ProtectedRoute
+          path="/admin"
+          exact
+          component={Devices}
+          typeofuser="admin"
+          page="home"
+          {...this.props}
+        />
+        <ProtectedRoute
           path="/user/devices"
           exact
           component={Devices}
           typeofuser="user"
           page="devices"
+          {...this.props}
+        />
+        <ProtectedRoute
+          path="/admin/devices"
+          exact
+          component={Devices}
+          typeofuser="admin"
+          page="devices"
+          {...this.props}
         />
         {/* <Route path="/user/notifications" exact render={() => <Devices typeofuser="user" page="home"/>} /> */}
         <ProtectedRoute
           path="/user/profile"
           exact
           component={Profile}
+          {...this.props}
+        />
+        <ProtectedRoute
+          path="/admin/profile"
+          exact
+          component={Profile}
+          {...this.props}
+        />
+        <ProtectedRoute
+          path="/user/notifications"
+          exact
+          component={Notifications}
+          {...this.props}
+        />
+        <ProtectedRoute
+          path="/admin/notifications"
+          exact
+          component={Notifications}
           {...this.props}
         />
       </div>

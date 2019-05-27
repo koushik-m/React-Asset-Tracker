@@ -1,5 +1,5 @@
 /* eslint-disable no-undef */
-import { defData } from '../store/Store'
+import { defData } from '../Store/Store'
 export function AddNewDevice (newdevice) {
   return { type: 'ADD_NEW_DEVICE', newdevice }
 }
@@ -17,6 +17,12 @@ export function AuthenticateUser (user) {
   const userDetails = defData.userdata.filter(
     (p, i) => p.username === user.username && p.password === user.password
   )
-  sessionStorage.setItem('loggedInUser', JSON.stringify(userDetails[0]))
+  console.log('inside Authenticate user')
+  console.log(userDetails)
+  localStorage.setItem('loggedInUser', JSON.stringify(userDetails[0]))
   return { type: 'IS_USER_AUTHENTICATED', userDetails }
+}
+
+export function Logout () {
+  return { type: 'LOGOUT' }
 }

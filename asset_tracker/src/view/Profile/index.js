@@ -16,7 +16,7 @@ export default class Profile extends React.Component {
 
     return (
       <React.Fragment>
-        <Navbar />
+        <Navbar {...this.props} />
         <Container>
           <div className="margin" />
           <Row>

@@ -23,7 +23,6 @@ export default class Card extends React.Component {
       button2 = 'Cancel'
       button3 = ''
     } else if (page === 'devices' && typeofuser === 'user') {
-      console.log('here')
       button1 = 'Request'
       button2 = 'Instant Request'
       button3 = ''
@@ -32,7 +31,11 @@ export default class Card extends React.Component {
     return (
       <div className="card">
         <React.Fragment>
-          <Image source={imgsrc} />
+          <div className="image">
+            {' '}
+            <Image source={imgsrc} />
+          </div>
+
           <Header headerprop={headerprop} />
           <Label labelprop={company} />
           <Label labelprop={os} />
