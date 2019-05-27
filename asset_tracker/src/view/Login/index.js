@@ -20,14 +20,25 @@ class Login extends React.Component {
       password: ''
     }
   }
-
+  handleKeyPress (target) {
+    if (target.charCode === 13) {
+      document.getElementById('myBtn').click()
+    }
+  }
   validate = () => {
     this.props.AuthenticateUser(this.state)
   }
+  enter = e => {}
   render () {
+    // console.log('inside login render')
+    // console.log(this.props.allUsers)
     if (this.props.allUsers.isUserLoggedIn) {
       Auth.login()
-      this.props.history.history.push('/user')
+      if (this.props.allUsers.userDetails.role === 'user') {
+        this.props.history.history.push('/user')
+      } else if (this.props.allUsers.userDetails.role === 'admin') {
+        this.props.history.history.push('/admin')
+      }
     }
     return (
       <React.Fragment>
@@ -54,13 +65,19 @@ class Login extends React.Component {
               <Input
                 placeholder="Password"
                 className="mt-5 mb-5"
+                id="myInput"
                 ref="password"
                 value={this.state.password}
+                onKeyPress={this.handleKeyPress}
                 onChange={e => {
                   return this.setState({ password: e.target.value })
                 }}
               />
-              <Button btnprop="btn btn-dark" onPress={this.validate.bind(this)}>
+              <Button
+                btnprop="btn btn-dark"
+                onPress={this.validate.bind(this)}
+                id="myBtn"
+              >
                 Login
               </Button>
               <Link to="/register">

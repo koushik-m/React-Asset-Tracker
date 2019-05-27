@@ -20,7 +20,9 @@ class Signup extends React.Component {
             </div>
           </Col>
           <Col md={6}>
+            <div className="margin" />
             <Header headerprop="Sign Up" />
+
             <Container>
               <Input placeholder="Name" className="mt-5 mb-5" />
               <Input placeholder="Username" className="mt-5 mb-5" />
