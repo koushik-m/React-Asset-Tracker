@@ -5,7 +5,7 @@ export var userdata = [
     email: 'john@gmail.com',
     password: 'john12',
     role: 'user',
-    requestedDevice: [104, 105, 106],
+    requestedDevice: [104, 102],
     currentDevice: [104]
   },
   {
@@ -22,7 +22,7 @@ export var userdata = [
     email: 'peter@gmail.com',
     password: 'peter12',
     role: 'user',
-    requestedDevice: [101, 102, 103],
+    requestedDevice: [101],
     currentDevice: [104]
   }
 ]

@@ -30,8 +30,6 @@ class Login extends React.Component {
   }
   enter = e => {}
   render () {
-    // console.log('inside login render')
-    // console.log(this.props.allUsers)
     if (this.props.allUsers.isUserLoggedIn) {
       Auth.login()
       if (this.props.allUsers.userDetails.role === 'user') {
@@ -86,7 +84,7 @@ class Login extends React.Component {
             </Container>
           </Col>
         </Row>
-        <Row>
+        <Row className="mt-5">
           <Col md={{ size: 4, offset: 4 }}>
             <Image source="AssetLogo.jpg" />
           </Col>
