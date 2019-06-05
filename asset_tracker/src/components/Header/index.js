@@ -1,15 +1,15 @@
-import React from 'react'
-import './styles.css'
-import PropTypes from 'prop-types'
+import React from 'react';
+import './styles.css';
+import PropTypes from 'prop-types';
 
-export class Header extends React.Component {
-  render () {
-    const { title } = this.props
+export default class Header extends React.Component {
+  render() {
+    const { title } = this.props;
 
-    return <h4>{title}</h4>
+    return <h4>{title}</h4>;
   }
 }
 
 Header.propTypes = {
-  title: PropTypes.string
-}
+  title: PropTypes.string,
+};
