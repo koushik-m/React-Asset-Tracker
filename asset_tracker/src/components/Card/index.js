@@ -30,22 +30,26 @@ export default class Card extends React.Component {
 
     return (
       <div className="card">
-        <React.Fragment>
-          <div className="image">
-            {' '}
-            <Image source={imgsrc} />
-          </div>
+        <div className="image">
+          {' '}
+          <Image source={imgsrc} />
+        </div>
 
-          <Header headerprop={headerprop} />
-          <Label labelprop={company} />
-          <Label labelprop={os} />
-          <div>
-            <Button btnprop="btn btn-dark">{button1}</Button>
-            <Button btnprop="btn btn-dark">{button2}</Button>
-            {button3 ? <Button btnprop="btn btn-dark">{button3}</Button> : ''}
-          </div>
-        </React.Fragment>
+        <Header headerprop={headerprop} />
+        <Label labelprop={company} />
+        <Label labelprop={os} />
+        <div>
+          <Button btnprop="btn btn-dark">{button1}</Button>
+          <Button btnprop="btn btn-dark">{button2}</Button>
+          {button3 ? <Button btnprop="btn btn-dark">{button3}</Button> : ''}
+        </div>
+
+        <PageLayout title="Devices">
+          <button />
+        </PageLayout>
       </div>
     )
   }
 }
+
+// Service ===> Store ==> Component

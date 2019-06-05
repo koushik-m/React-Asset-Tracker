@@ -84,11 +84,7 @@ class Login extends React.Component {
             </Container>
           </Col>
         </Row>
-        <Row className="mt-5">
-          <Col md={{ size: 4, offset: 4 }}>
-            <Image source="AssetLogo.jpg" />
-          </Col>
-        </Row>
+
       </React.Fragment>
     )
   }

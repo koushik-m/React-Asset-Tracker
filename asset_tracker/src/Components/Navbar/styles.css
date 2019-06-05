@@ -18,10 +18,10 @@
       float:left !important;
       width: 14%;
       margin-right: 55%;
+      white-space: nowrap;
   }
   
   .navbar .active:hover {
-    background-color: #1ba0a9;
     }
      
      .navbar .active .home {
@@ -36,4 +36,14 @@
     }
   }
 
+  @media only screen and (max-width: 600px) {
+    .navbar {
+      flex-wrap: nowrap !important;
+      padding-right: 60px !important;
+    }
+
+    .navbar .btn{
+      white-space: nowrap;
+    }
+  }
   

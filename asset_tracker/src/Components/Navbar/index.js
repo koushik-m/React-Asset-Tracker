@@ -6,12 +6,12 @@ import './styles.css'
 import { Link } from 'react-router-dom'
 import Auth from '../../auth'
 
-export default class Navbar extends React.Component {
+export class Navbar extends React.Component {
   logUserOut = () => {
     this.props.Logout()
     localStorage.removeItem('loggedInUser')
     this.props.history.push('/')
-  }
+  };
   render () {
     console.log('inside navbar', this.props.allUsers.userDetails.role)
     if (this.props.allUsers.userDetails.role === 'admin') {
