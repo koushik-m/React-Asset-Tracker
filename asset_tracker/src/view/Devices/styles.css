@@ -1,3 +1,8 @@
 .margin {
     margin-top: 5%;
 }
+
+.requested {
+    text-align: center;
+    border: solid black;
+}

@@ -58,7 +58,7 @@ export default class Devices extends React.Component {
           cards.push({ user: device.username, devices: userDevices })
           return (
             <Col md={4}>
-              <div>{device.username}</div>
+              <div className='requested'>{device.username} has requested this device</div>
               <Card
                 headerprop={name}
                 imgsrc={img}
