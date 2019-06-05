@@ -1,7 +1,7 @@
 export class AuthService {
-  login(username, password) {
+  login (username, password) {
     return new Promise((resolve, reject) => {
-      resolve();
-    });
+      resolve()
+    })
   }
 }

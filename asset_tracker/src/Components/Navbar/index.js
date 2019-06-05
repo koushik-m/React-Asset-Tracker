@@ -1,19 +1,19 @@
 /* eslint-disable no-undef */
 /* eslint-disable no-unused-vars */
-import React from 'react';
-import Button from '../Button/index';
-import './styles.css';
-import { Link } from 'react-router-dom';
-import Auth from '../../auth';
+import React from 'react'
+import Button from '../Button/index'
+import './styles.css'
+import { Link } from 'react-router-dom'
+import Auth from '../../auth'
 
 export class Navbar extends React.Component {
   logUserOut = () => {
-    this.props.Logout();
-    localStorage.removeItem('loggedInUser');
-    this.props.history.push('/');
+    this.props.Logout()
+    localStorage.removeItem('loggedInUser')
+    this.props.history.push('/')
   };
-  render() {
-    console.log('inside navbar', this.props.allUsers.userDetails.role);
+  render () {
+    console.log('inside navbar', this.props.allUsers.userDetails.role)
     if (this.props.allUsers.userDetails.role === 'admin') {
       return (
         <div className="navbar">
@@ -33,7 +33,7 @@ export class Navbar extends React.Component {
             Log out
           </Button>
         </div>
-      );
+      )
     } else if (this.props.allUsers.userDetails.role === 'user') {
       return (
         <div className="navbar">
@@ -53,7 +53,7 @@ export class Navbar extends React.Component {
             Log out
           </Button>
         </div>
-      );
+      )
     }
   }
 }
